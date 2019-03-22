@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>Your BMI: {{ BMI }}</p>
+    {% if BMI < 16 %}
+    <p>You are severely underweight</p> 
+    {% elif 16 <= BMI <=  18.5 %}
+    <p>You are underweight</p>
+    {% elif 18.5 < BMI <= 25 %}
+    <p>You are normal</p>
+    {% elif 25 < BMI <= 30 %}
+    <p>You are overweight</p>    
+    {% elif BMI > 30 %}
+    <p>You are obese</p>
+    {% endif %}
+    <hr>
+</body>
+</html>
