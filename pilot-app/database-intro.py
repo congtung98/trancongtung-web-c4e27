@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 
 # 1. Connect mongodb
 mongo_uri = "mongodb+srv://admin:admin@cluster0-bvpux.mongodb.net/test?retryWrites=true"
@@ -26,5 +27,27 @@ first_collection = db_demo["my_collection"]
 #     print(document["title"])
 
 # 6.2 READ one
-one_document = first_collection.find_one({"title": "LoL"})
-print(one_document)
+# one_document = first_collection.find_one({"title": "LoL"})
+# print(one_document)
+
+# 7. DELETE
+# delete_document = first_collection.find_one({"_id": ObjectId("5c979c26c6c5843f246d1889")})
+
+# if delete_document is not None:
+#     first_collection.delete_one(delete_document)
+#     print("Delete Complete!")
+# else:
+#     print("Not Found")
+
+# 8. UPDATE
+update_document = first_collection.find_one({"_id": ObjectId("5c979c3fc6c58431988fea7b")})
+new_value = { 
+                "$set" : { 
+                            "title": "Khong biet", 
+                         } 
+            }
+first_collection.update_one(update_document, new_value)
+
+
+
+
