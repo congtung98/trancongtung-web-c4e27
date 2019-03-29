@@ -8,8 +8,9 @@
 </head>
 <body>
     <h2>List of rivers in each continents</h2>
-    <a href="/river/Africa">Africa</a> <br>
-    <a href="/river/Eurasia">Eurasia</a> <br>
+    {% for river in continent_list %}
+    <a href="/river/{{ river }}">{{ river }}</a> <br>
+    {% endfor %}
     <a href="/river/S. America">S. America with length less than 1000 km</a>
 </body>
 </html>

@@ -9,7 +9,12 @@ def index():
 
 @app.route('/river')
 def all_river():
-    return render_template('all-rivers.html')
+    rivers = rivers_collection.find()
+    continent_list = []
+    for river in rivers:
+      if river["continent"] not in continent_list:
+        continent_list.append(river["continent"])
+    return render_template('all-rivers.html',rivers = rivers,continent_list = continent_list)
 
 @app.route('/river/<continent>')
 def river(continent):

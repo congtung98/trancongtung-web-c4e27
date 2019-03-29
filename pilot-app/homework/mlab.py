@@ -7,4 +7,3 @@ db = client.c4e
 
 rivers_collection = db["river"]
 
-
