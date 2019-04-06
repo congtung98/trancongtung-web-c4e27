@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div.form
+        {
+            margin-top: 100px;
+            display: block;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input[type=text] {
+        border: 1px solid gray;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 10px;
+        }
+        button{
+        background-color: rgb(36, 91, 136);
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form method="POST">
+            <label>Model</label>
+            <br>
+            <input name="input_model" type="text" value="e.g. Honda">
+            <br>
+            <label>Daily fee (VND)</label>
+            <br>
+            <input name="input_fee" type="text" value="10000">
+            <br>
+            <label>Image</label>
+            <br>
+            <input name="input_image" type="text" value="e.g. https://hondaxemay.com">
+            <br>
+            <label>Year</label>
+            <br>
+            <input name="input_year" type="text" value="e.g. 2013">
+            <br>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

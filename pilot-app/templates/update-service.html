@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <label>Name</label>
+        <input name="input_name" type="text" value="{{ update_service.name }}">
+        <br>
+        <label>Age</label>
+        <input name="input_age" type="text" value="{{ update_service.age }}">
+        <br>
+        <label>Address</label>
+        <input name="input_address" type="text" value="{{ update_service.address }}">
+        <br>
+        <label>Gender</label>
+        <input name="input_gender" type="text" value="{{ update_service.gender }}">
+        <br>
+        <label>Height</label>
+        <input name="input_height" type="text" value="{{ update_service.height }}">
+        <br>
+        <label>Available</label>
+        <input name="input_available" type="text" value="{{ update_service.available }}">
+        <br>
+        <button>Update</button>
+    </form>
+</body>
+</html>
